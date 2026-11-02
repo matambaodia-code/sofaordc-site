@@ -1705,3 +1705,16 @@ textarea {
   .materials-grid { grid-template-columns: 1fr; }
   .material-card { min-height: auto; }
 }
+
+/* Photos des matériaux */
+.material-card { padding-top: 0; }
+.material-photo {
+  display: block;
+  width: calc(100% + 52px);
+  margin: 0 -26px 22px;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  background: var(--ink-deep);
+}
+.material-card h3 { margin-top: 14px; }
