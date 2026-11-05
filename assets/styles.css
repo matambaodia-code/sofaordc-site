@@ -1739,3 +1739,91 @@ textarea {
   .turnkey-copy{padding:44px 20px 52px}
   .turnkey .button-row{flex-direction:column;align-items:stretch}
 }
+
+/* Location de bétonnière */
+.rental-layout {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: center;
+}
+
+.rental-copy h2 {
+  font-size: clamp(2.4rem, 4vw, 4.2rem);
+  line-height: 1.02;
+}
+
+.rental-copy > p:not(.eyebrow) {
+  margin: 26px 0 22px;
+  color: #b9c4d6;
+  line-height: 1.75;
+}
+
+.rental-points {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.rental-points li {
+  position: relative;
+  padding-left: 26px;
+  color: #dbe2ee;
+  font-weight: 600;
+}
+
+.rental-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .45em;
+  width: 11px;
+  height: 11px;
+  background: var(--orange);
+}
+
+.rental-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--ink-deep);
+  border-bottom: 4px solid var(--orange);
+}
+
+.rental-gallery {
+  display: grid;
+  grid-template-columns: .75fr 1fr 1.35fr;
+  gap: 16px;
+  margin-top: clamp(48px, 6vw, 80px);
+}
+
+.rental-gallery img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+@media (max-width: 1080px) {
+  .rental-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .rental-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rental-gallery img {
+    height: 240px;
+  }
+
+  .rental-gallery img:last-child {
+    grid-column: 1 / -1;
+    height: auto;
+  }
+}
